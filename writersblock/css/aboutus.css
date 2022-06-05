@@ -1,0 +1,316 @@
+
+body{
+    background: aqua;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+@media (max-width:768px) {
+    body {
+        display: flex;
+        width: 40%;
+    }
+} 
+
+/* GRID FOR ELEMENTS */
+.layout {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: 100px auto 100px;
+}
+
+header {
+    background: aqua;
+    grid-column-start: span 3;
+}
+
+main {
+    background: orange;
+    grid-column-start: span 2;
+}
+
+aside {
+    background: blue;
+    grid-column-start: span 1;
+}
+
+footer {
+    background: green;
+    grid-column-start: span 3;
+}
+
+/* ADD RESPONSIVENESS */
+@media (max-width:768px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto auto 100px;
+    }
+    header,main,footer {
+        grid-column-start: span 1;
+    }
+    aside {
+        display: none;
+    }
+} 
+
+/* header */
+
+header {
+    width: 100%;
+    height: 100px;
+    display: block;
+    background: white;
+    box-shadow: 3px 5px 8px rgb(30, 203, 209);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+nav {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    background: red;
+
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem .875rem;
+}
+
+nav span .logo {
+    height: 100%;
+    font-size: 1.rem;
+    color: aqua;
+    margin-left: .5rem;
+    float: left;
+    /* way to vertically align center */
+    display: table; 
+}
+
+nav div .sitename {
+    font-size: 2.5rem;
+    color: blue;
+    height: 100%;
+    /* how to center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ul .navigation {
+    float: right;
+    height: 100%;
+}
+
+nav ul li {
+    display: table;
+    float: left;
+    height: 100%;
+    padding: 0 15px;
+}
+
+ul li a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+}
+
+@media (max-width:768px) {
+    .layout header {
+        width: 100%;
+    }
+    nav {
+        width:100%;
+    }
+} 
+
+/* main */
+main {
+    width: 95%;
+    margin: 0 18rem 0 2rem; 
+    border: .3rem solid rgb(255, 251, 0);
+}
+
+main article h1 {
+    border: .3rem solid red;
+    font-size: 5rem;
+    display: inline-block;
+    margin-left: 34.5%;
+}
+.authorpic img {
+    border: .3rem solid red;
+    width: 450px;
+    height: auto;
+    position: relative;
+    margin-left: 30%;
+}
+
+article p {
+    text-indent: 2.5rem;
+}
+
+article p::first-letter {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .layout main {
+        margin: 0rem;
+        width: 100vw;
+    }
+    main article {
+        width: 100%;
+    }
+    .authorpic img {
+        margin-left: 15%;
+    }
+    main article h1 {
+        margin-left: 23%;
+    }
+}
+/* footer */
+footer span a {
+    float: right;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  
+footer a i:hover {
+    background-color: blue; 
+    font-size: 2.5rem;
+    
+  }
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: table;
+    background: red;
+    box-shadow: 3px -5px 8px rgb(30, 203, 209);
+}
+
+footer .inner_footer {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    display: table;
+    background: white;
+}
+
+div .footer_logo {
+    margin: 3rem ;
+    display: block;
+    width: auto;
+    height: auto;
+    float: left;
+    font-size: 1.8rem;
+    color: blue;
+}   
+
+.inner_footer .footer_link {
+    margin: .5rem 1.5rem;
+    display: block;
+    width: 21.5%;
+    height: auto;
+    float: left;
+}
+
+.inner_footer .footer_link:last-child {
+    margin-right: 0;
+}
+
+.inner_footer .footer_link h1 {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.footer_link a {
+    display: flex;
+    margin-top: .2rem;
+    color: black;
+}
+
+.social a {
+    display: inline-block;
+    margin: 1.1rem;
+    border-radius: 50%;
+    opacity: 0.75;
+    background: none;
+}
+
+.insta i {
+    color: orangered;
+}
+.snap i {
+    color: yellow;
+}
+.twit i {
+    color: aqua;
+}
+.fb  i {
+    color: darkblue;
+}
+
+div .inner_footer span {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: .3rem solid;
+}
+
+.inner_footer span p {
+    display: inline-block;
+    width: 100%;
+    margin-left: 0px;
+    font-size: 1rem;
+    border: .3rem solid yellow;
+}
+
+@media (max-width:768px) {
+    footer .inner_footer {
+        width: 75%;
+        border: .1rem solid teal;
+    }
+
+    footer div .footer_link {
+        min-width: fit-content;
+        margin-bottom: 1px;
+        border: .2rem solid yellow;
+        display: flex;
+    }
+
+    div .footer_logo {
+        margin: 5rem;
+        text-align: center;
+        border: .2rem solid rgb(8, 8, 8);
+    }   
+
+    .inner_footer .footer_link span {
+        width: 200px;
+        border: .2rem solid rgb(0, 26, 255);
+    }  
+    .social {
+        width: 120px;
+        height: 100px;
+        border: .3rem solid rgb(0, 255, 64);
+        margin-left: 2.5rem;
+    }
+} 
