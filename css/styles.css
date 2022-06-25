@@ -1,6 +1,6 @@
 
 body{
-    background: aqua;
+    background: whitesmoke;
 }
 
 * {
@@ -23,22 +23,26 @@ body{
 }
 
 header {
-    background: aqua;
+    background: rgb(0,52,255);
+    background: radial-gradient(circle, rgba(0,52,255,1) 35%, rgba(76,215,255,1) 100%);
     grid-column-start: span 3;
 }
 
 main {
-    background: orange;
+    background: rgb(0,52,255);
+    background: radial-gradient(circle, rgba(0,52,255,1) 35%, rgba(76,215,255,1) 100%);
     grid-column-start: span 2;
 }
 
 aside {
-    background: blue;
+    background: rgb(0,52,255);
+    background: radial-gradient(circle, rgba(0,52,255,1) 35%, rgba(76,215,255,1) 100%);
     grid-column-start: span 1;
 }
 
 footer {
-    background: green;
+    background: rgb(0,52,255);
+    background: radial-gradient(circle, rgba(0,52,255,1) 35%, rgba(76,215,255,1) 100%);
     grid-column-start: span 3;
 }
 
@@ -59,11 +63,10 @@ header {
     width: 100%;
     height: 100px;
     display: block;
-    background: white;
-    box-shadow: 3px 5px 8px rgb(30, 203, 209);
+    box-shadow: 3px 5px 8px rgb(192, 236, 238);
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 99;   
 }
 
 nav {
@@ -71,8 +74,9 @@ nav {
     height: 100%;
     margin: 0 auto;
     display: block;
-    background: red;
-
+    background: rgb(76,215,255);
+    background: radial-gradient(circle, rgba(76,215,255,1) 35%, rgba(0,52,255,1) 100%);
+    box-shadow: 3px 5px 8px #4cd7ff;
 }
 
 header nav {
@@ -85,7 +89,7 @@ header nav {
 nav span .logo {
     height: 100%;
     font-size: 1.rem;
-    color: aqua;
+    color: whitesmoke;
     margin-left: .5rem;
     float: left;
     /* way to vertically align center */
@@ -94,7 +98,7 @@ nav span .logo {
 
 nav div .sitename {
     font-size: 2.5rem;
-    color: blue;
+    color: white;
     height: 100%;
     /* how to center vertically */
     display: table-cell;
@@ -117,6 +121,7 @@ ul li a {
     display: table-cell;
     vertical-align: middle;
     height: 100%;
+    color: white;
 }
 
 @media (max-width:768px) {
@@ -270,7 +275,6 @@ footer {
     width: 100%;
     height: 100px;
     display: table;
-    background: red;
     box-shadow: 3px -5px 8px rgb(30, 203, 209);
 }
 
@@ -279,7 +283,8 @@ footer .inner_footer {
     height: 100%;
     margin: 0 auto;
     display: table;
-    background: white;
+    background: rgb(76,215,255);
+    background: radial-gradient(circle, rgba(76,215,255,1) 35%, rgba(0,52,255,1) 100%);
 }
 
 div .footer_logo {
