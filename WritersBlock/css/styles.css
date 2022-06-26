@@ -1,0 +1,400 @@
+
+body{
+    background: whitesmoke;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* GRID FOR ELEMENTS */
+.layout {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: 100px auto 100px;
+}
+
+header {
+    background: rgb(0,52,255);
+    background: radial-gradient(circle, rgba(0,52,255,1) 35%, rgba(76,215,255,1) 100%);
+    grid-column-start: span 3;
+}
+
+main {
+    background: rgb(0,52,255);
+    background: radial-gradient(circle, rgba(0,52,255,1) 35%, rgba(76,215,255,1) 100%);
+    grid-column-start: span 2;
+}
+
+aside {
+    background: rgb(76,215,255);
+    background: radial-gradient(circle, rgba(76,215,255,1) 35%, rgba(0,52,255,1) 100%);
+    grid-column-start: span 1;
+}
+
+footer {
+    background: rgb(0,52,255);
+    background: radial-gradient(circle, rgba(0,52,255,1) 35%, rgba(76,215,255,1) 100%);
+    grid-column-start: span 3;
+}
+
+/* ADD RESPONSIVENESS */
+@media (max-width:768px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto auto 100px;
+    }
+    header,main,aside,footer {
+        grid-column-start: span 1;
+    }
+} 
+
+/* header */
+
+header {
+    width: 100%;
+    height: 100px;
+    display: block;
+    box-shadow: 3px 5px 8px rgb(192, 236, 238);
+    position: sticky;
+    top: 0;
+    z-index: 99;   
+}
+
+nav {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    background: rgb(76,215,255);
+    background: radial-gradient(circle, rgba(76,215,255,1) 35%, rgba(0,52,255,1) 100%);
+    box-shadow: 3px 5px 8px #4cd7ff;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem .875rem;
+}
+
+nav span .logo {
+    height: 100%;
+    font-size: 1.rem;
+    color: whitesmoke;
+    margin-left: .5rem;
+    float: left;
+    /* way to vertically align center */
+    display: table; 
+}
+
+nav div .sitename {
+    font-size: 2.5rem;
+    color: white;
+    height: 100%;
+    /* how to center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ul .navigation {
+    float: right;
+    height: 100%;
+}
+
+nav ul li {
+    display: table;
+    float: left;
+    height: 100%;
+    padding: 0 15px;
+}
+
+ul li a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+}
+
+@media (max-width:768px) {
+    nav {
+        width:100%;
+    }
+} 
+
+/* main */
+
+article .col {
+    width: 49.5%;
+}
+
+.post .postimg {
+    width: 100%;
+    height:350px;
+    object-fit: cover;
+}
+
+.userinfo img {
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.userinfo {
+    display: flex;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.userinfo span {
+    margin-left: .5rem;
+} 
+
+/* #tech */
+.userinfo span:nth-child(4) {
+    color: rgb(0,52,255);
+}
+
+.post p {
+    font-size: 0.8rem;
+    line-height: 1.0;
+    opacity: 0.8;
+    text-align: justify;
+    text-indent: 3.5rem;
+    
+}
+
+.post p::first-letter {
+    font-weight: bold;
+    font-size: 3rem;
+} 
+
+.post {
+    background: white;
+    box-shadow: 3px 5px 8px #4cd7ff;
+    margin-top: 1.5rem;
+}
+
+.postinfo {
+    padding: 0.5rem;
+}
+
+main article {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.875rem;
+    margin-top: -1.8rem;
+}
+
+.postinfo h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    main article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    article .col{
+        width: 100%;
+    }
+}
+
+/* aside */
+aside section {
+    width: 15vw;
+    height: 100%;
+}
+section .sidearticle {
+    color: white;
+    margin: 1rem;
+    text-align: center;
+}
+
+section .postlist {
+    background: white;
+    margin: .5rem;
+    font-size: 10px;
+}
+
+.sidebarpic {
+    margin: 25rem 1rem 1rem 1rem;
+}
+
+.sidebarpic img {
+    width: 145px;
+    height: auto;
+    position: relative;
+    border: 2px solid none;
+    margin: .5rem;
+}
+
+.postlist .readmore {
+    display: inline-block;
+    color: black;
+}
+
+@media (max-width:768px) {
+    aside section {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+div .sidebarpic img {
+    margin: 1rem 15rem;
+}
+
+} 
+
+/* footer */
+footer span a {
+    float: right;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  
+footer a i:hover {
+    background-color: blue; 
+    font-size: 2.5rem;
+    
+  }
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: table;
+    box-shadow: 3px -5px 8px #4cd7ff;
+}
+
+footer .inner_footer {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    display: table;
+    background: rgb(76,215,255);
+    background: radial-gradient(circle, rgba(76,215,255,1) 35%, rgba(0,52,255,1) 100%);
+}
+
+div .footer_logo {
+    margin: 3rem ;
+    display: block;
+    width: auto;
+    height: auto;
+    float: left;
+    font-size: 1.8rem;
+    color: white;
+}   
+
+.inner_footer .footer_link {
+    margin: .5rem 1.5rem;
+    display: block;
+    width: 21.5%;
+    height: auto;
+    float: left;
+}
+
+.inner_footer .footer_link:last-child {
+    margin-right: 0;
+}
+
+.inner_footer .footer_link h1 {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.footer_link a {
+    display: flex;
+    margin-top: .2rem;
+    color: black;
+}
+
+.social a {
+    display: inline-block;
+    margin: 1.1rem;
+    border-radius: 50%;
+    opacity: 0.75;
+    background: none;
+}
+
+.insta i {
+    color: orangered;
+}
+.snap i {
+    color: yellow;
+}
+.twit i {
+    color: aqua;
+}
+.fb  i {
+    color: darkblue;
+}
+
+div .inner_footer span {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: .3rem solid none;
+}
+
+.inner_footer span p {
+    display: inline-block;
+    width: 100%;
+    margin-left: 0px;
+    font-size: 1rem;
+    border: .3rem solid none;
+}
+
+@media (max-width:768px) {
+    footer .inner_footer {
+        width: 75%;
+        border: .1rem solid teal;
+    }
+
+    footer div .footer_link {
+        min-width: fit-content;
+        margin-bottom: 1px;
+        border: .2rem solid none;
+        display: flex;
+    }
+
+    div .footer_logo {
+        margin: 5rem;
+        text-align: center;
+        border: .2rem solid none;
+    }   
+
+    .inner_footer .footer_link span {
+        width: 200px;
+        border: .3rem solid none;
+    }  
+    .social {
+        width: 120px;
+        height: 100px;
+        border: .3rem solid none;
+        margin-left: 2.5rem;
+    }
+} 
+
+@media (min-width:769px) and (max-width:1200px) {
+    .sidebarpic {
+        margin: 30rem 1rem 1rem 1rem;
+        }
+
+    .sidebarpic img {
+        width: 110px;
+        margin: 0rem;
+        }
+}
