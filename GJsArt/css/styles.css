@@ -76,7 +76,7 @@ nav {
     display: block;
     background: rgb(76,215,255);
     background: radial-gradient(circle, rgba(76,215,255,1) 35%, rgba(0,52,255,1) 100%);
-    box-shadow: 3px 5px 8px #4cd7ff;
+    box-shadow: 1px 2px 4px 3px #4cd7ff;
 }
 
 header nav {
@@ -213,6 +213,8 @@ main article {
 aside section {
     width: 15vw;
     height: 100%;
+    box-shadow: 1px 3px 4px 4px #4cd7ff;
+
 }
 section .sidearticle {
     color: white;
@@ -283,6 +285,7 @@ footer .inner_footer {
     display: table;
     background: rgb(76,215,255);
     background: radial-gradient(circle, rgba(76,215,255,1) 35%, rgba(0,52,255,1) 100%);
+    box-shadow: 1px 3px 4px 4px #4cd7ff;
 }
 
 div .footer_logo {
