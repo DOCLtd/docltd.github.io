@@ -51,9 +51,15 @@ footer {
     .layout {
         grid-template-columns: 1fr;
         grid-template-rows: 100px auto auto 100px;
+        height: 100vh;
+        width: 160vw;
+        margin: 0;
     }
-    header,main,aside,footer {
-        grid-column-start: span 1;
+    header,main,footer {
+        grid-column-start: span 3;
+    }
+    aside {
+        grid-column: none;  
     }
 } 
 
@@ -250,6 +256,7 @@ section .postlist {
     width: 100%;
     height: 100%;
     background: white;
+    margin-right: 35rem;
 }
 
 div .sidebarpic img {
