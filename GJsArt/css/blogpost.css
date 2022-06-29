@@ -30,22 +30,26 @@ body{
 }
 
 header {
-    background: aqua;
+    background: rgb(0,52,255);
+    background: radial-gradient(circle, rgba(0,52,255,1) 35%, rgba(76,215,255,1) 100%);
     grid-column-start: span 3;
 }
 
 main {
-    background: orange;
+    background: rgb(0,52,255);
+    background: radial-gradient(circle, rgba(0,52,255,1) 35%, rgba(76,215,255,1) 100%);
     grid-column-start: span 2;
 }
 
 aside {
-    background: blue;
+    background: rgb(76,215,255);
+    background: radial-gradient(circle, rgba(76,215,255,1) 35%, rgba(0,52,255,1) 100%);
     grid-column-start: span 1;
 }
 
 footer {
-    background: green;
+    background: rgb(0,52,255);
+    background: radial-gradient(circle, rgba(0,52,255,1) 35%, rgba(76,215,255,1) 100%);
     grid-column-start: span 3;
 }
 
@@ -69,8 +73,7 @@ header {
     width: 100%;
     height: 100px;
     display: block;
-    background: white;
-    box-shadow: 3px 5px 8px rgb(30, 203, 209);
+    box-shadow: 3px 5px 8px rgb(192, 236, 238);
     position: sticky;
     top: 0;
     z-index: 99;
@@ -81,8 +84,9 @@ nav {
     height: 100%;
     margin: 0 auto;
     display: block;
-    background: red;
-
+    background: rgb(76,215,255);
+    background: radial-gradient(circle, rgba(76,215,255,1) 35%, rgba(0,52,255,1) 100%);
+    box-shadow: 1px 2px 4px 3px #4cd7ff;
 }
 
 header nav {
@@ -95,7 +99,7 @@ header nav {
 nav span .logo {
     height: 100%;
     font-size: 1.rem;
-    color: aqua;
+    color: whitesmoke;
     margin-left: .5rem;
     float: left;
     /* way to vertically align center */
@@ -104,7 +108,7 @@ nav span .logo {
 
 nav div .sitename {
     font-size: 2.5rem;
-    color: blue;
+    color: white;
     height: 100%;
     /* how to center vertically */
     display: table-cell;
@@ -127,6 +131,7 @@ ul li a {
     display: table-cell;
     vertical-align: middle;
     height: 100%;
+    color: white;
 }
 
 @media (max-width:768px) {
@@ -246,7 +251,7 @@ footer span a {
   }
   
 footer a i:hover {
-    background-color: blue; 
+    background-color: rgb(0,52,255);
     font-size: 2.5rem;
     
   }
@@ -255,8 +260,7 @@ footer {
     width: 100%;
     height: 100px;
     display: table;
-    background: red;
-    box-shadow: 3px -5px 8px rgb(30, 203, 209);
+    box-shadow: 3px -5px 8px #4cd7ff;
 }
 
 footer .inner_footer {
@@ -264,7 +268,9 @@ footer .inner_footer {
     height: 100%;
     margin: 0 auto;
     display: table;
-    background: white;
+    background: rgb(76,215,255);
+    background: radial-gradient(circle, rgba(76,215,255,1) 35%, rgba(0,52,255,1) 100%);
+    box-shadow: 1px 3px 4px 4px #4cd7ff;
 }
 
 div .footer_logo {
@@ -274,7 +280,7 @@ div .footer_logo {
     height: auto;
     float: left;
     font-size: 1.8rem;
-    color: blue;
+    color: white;
 }   
 
 .inner_footer .footer_link {
@@ -323,20 +329,16 @@ div .footer_logo {
     color: darkblue;
 }
 
-div .inner_footer span {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    border: .3rem solid;
+.navarrow i {
+    color: white;
 }
 
 .inner_footer span p {
     display: inline-block;
     width: 100%;
-    margin-left: 0px;
+    margin-left: 350px;
     font-size: 1rem;
-    border: .3rem solid yellow;
+    border: .3rem solid none;
 }
 
 @media (max-width:768px) {
