@@ -164,52 +164,16 @@ main article {
     box-shadow: 8rem 8rem 8rem 8rem rgb(61, 64, 110);
 }
 
-
-
 article .col {
     width: 49.5%;
 }
 
 .col .post .postimg {
-    width: 50%;
-    height: auto;
-    margin-left: 19rem;
+    width: 420px;
+    height: 594px;
+    margin-left: 0rem;
     border: .3rem solid yellow;
 }
-
-.userinfo img {
-    width: 3rem;
-    border-radius: 50%;
-}
-
-.userinfo {
-    display: flex;
-    align-items: center;
-    margin: .5rem 0;
-}
-
-.userinfo span {
-    margin-left: .5rem;
-} 
-
-/* #tech */
-.userinfo span:nth-child(4) {
-    color: blueviolet;
-}
-
-.post p {
-    font-size: 0.8rem;
-    line-height: 1.0;
-    opacity: 0.8;
-    text-align: justify;
-    text-indent: 3.5rem;
-    
-}
-
-.post p::first-letter {
-    font-weight: bold;
-    font-size: 3rem;
-} 
 
 article .col .post {
     background: white;
@@ -217,21 +181,6 @@ article .col .post {
     margin-top: .5rem;
     width: 97vw;
 }
-
-.postinfo {
-    padding: 0.5rem;
-}
-
-.postinfo h2 {
-    border: .3rem solid red;
-    display: inline-block;
-}
-
-.postinfo h2:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
 
 @media (max-width: 768px) {
     .layout main {

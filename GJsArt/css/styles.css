@@ -144,7 +144,7 @@ article .col {
 
 .post .postimg {
     width: 100%;
-    height:350px;
+    height:auto;
     object-fit: cover;
 }
 
@@ -235,15 +235,15 @@ section .postlist {
 }
 
 .sidebarpic {
-    margin: 25rem 1rem 1rem 1rem;
+    margin: 40rem 1rem 1rem 1rem;
 }
 
 .sidebarpic img {
-    width: 145px;
-    height: auto;
+    width: 180px;
+    height: 345px;
     position: relative;
     border: 2px solid none;
-    margin: .5rem;
+    margin: .0rem;
 }
 
 .postlist .readmore {
