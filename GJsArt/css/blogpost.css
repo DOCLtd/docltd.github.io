@@ -73,7 +73,7 @@ header {
     width: 100%;
     height: 100px;
     display: block;
-    box-shadow: 3px 5px 8px rgb(192, 236, 238);
+    box-shadow: 1px 2px 4px 3px #4cd7ff;
     position: sticky;
     top: 0;
     z-index: 99;
@@ -148,20 +148,18 @@ main {
     width: 98.7vw;
     height: auto;
     margin: 0rem; 
-    border: .3rem solid rgb(255, 251, 0);
 }
 
 main article {
     width: 100%;
     height: auto;
-    border: .3rem solid rgb(83, 0, 88);
 }
 
 .banner img {
     object-fit: cover;
     height: auto;
     width: 100%;
-    box-shadow: 8rem 8rem 8rem 8rem rgb(61, 64, 110);
+    box-shadow: 1px 3px 4px 4px #4cd7ff;
 }
 
 article .col {
@@ -169,15 +167,15 @@ article .col {
 }
 
 .col .post .postimg {
-    width: 420px;
-    height: 594px;
-    margin-left: 0rem;
-    border: .3rem solid yellow;
+    display: inline-flex;
+    width: 305px;
+    height: 406px;
+    margin-left: 6.5rem;
+    box-shadow: 1px 3px 4px 4px #4cd7ff;
 }
 
 article .col .post {
-    background: white;
-    box-shadow: 3px 5px 8px rgb(30, 203, 209);
+    box-shadow: 1px 2px 4px 3px #4cd7ff;
     margin-top: .5rem;
     width: 97vw;
 }
@@ -209,7 +207,7 @@ footer {
     width: 100%;
     height: 100px;
     display: table;
-    box-shadow: 3px -5px 8px #4cd7ff;
+    box-shadow: 1px 2px 4px 3px #4cd7ff;
 }
 
 footer .inner_footer {
@@ -271,8 +269,8 @@ div .footer_logo {
 .snap i {
     color: yellow;
 }
-.twit i {
-    color: aqua;
+.yt i {
+    color: red;
 }
 .fb  i {
     color: darkblue;
@@ -293,30 +291,25 @@ div .footer_logo {
 @media (max-width:768px) {
     footer .inner_footer {
         width: 75%;
-        border: .1rem solid teal;
     }
 
     footer div .footer_link {
         min-width: fit-content;
         margin-bottom: 1px;
-        border: .2rem solid yellow;
         display: flex;
     }
 
     div .footer_logo {
         margin: 5rem;
         text-align: center;
-        border: .2rem solid rgb(8, 8, 8);
     }   
 
     .inner_footer .footer_link span {
         width: 200px;
-        border: .3rem solid rgb(0, 26, 255);
     }  
     .social {
         width: 120px;
         height: 100px;
-        border: .2rem solid rgb(0, 255, 64);
         margin-left: 2.5rem;
     }
 } 
