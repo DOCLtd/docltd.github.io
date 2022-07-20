@@ -142,10 +142,15 @@ article .col {
     width: 49.5%;
 }
 
+div .post{
+    height: 75vh;
+}
+
 .post .postimg {
-    width: 100%;
-    height:auto;
+    width: 280px;
+    height:300px;
     object-fit: cover;
+    align-items: stretch;
 }
 
 .userinfo img {
@@ -186,6 +191,8 @@ article .col {
     background: white;
     box-shadow: 3px 5px 8px #4cd7ff;
     margin-top: 1.5rem;
+    height: auto;
+    width: auto;
 }
 
 .postinfo {
@@ -217,50 +224,80 @@ main article {
 
 /* aside */
 aside section {
-    width: 15vw;
-    height: 100%;
-    box-shadow: 1px 3px 4px 4px #4cd7ff;
-
-}
-section .sidearticle {
-    color: white;
-    margin: 1rem;
-    text-align: center;
-}
-
-section .postlist {
-    background: white;
-    margin: .5rem;
-    font-size: 10px;
-}
-
-.sidebarpic {
-    margin: 40rem 1rem 1rem 1rem;
-}
-
-.sidebarpic img {
-    width: 180px;
-    height: 345px;
+    height: 230vh;
+    margin: auto;
     position: relative;
-    border: 2px solid none;
-    margin: .0rem;
+    width: 25vw;
+    display: grid;
+    place-items: center;
+    box-shadow: 1px 3px 4px 4px #4cd7ff;
+    overflow: hidden;
 }
 
-.postlist .readmore {
-    display: inline-block;
-    color: black;
+section .sidearticle {
+    display: list-item;
+    width: calc(100px * 1);
+    animation: scroll 25s linear infinite;
 }
+
+.sidearticle:hover {
+    animation-play-state: paused ;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(200px);
+    }
+    100% {
+        transform: translateY(calc(-260px * 9));
+    }
+}
+section .postlist {
+    height: 145px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+section .postlist img{
+    width: 100%;
+    transition: transform 1s;
+}
+
+.postlist img:hover{
+    transform: translateZ(20px);
+}
+
+.section::before,
+.section::after {
+    background: (to right, rgba(255,255,255,1)0%,rgba(255,255,255,0)100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.section::before {
+    left: 0;
+    top: 0;
+}
+
+.section::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
 
 @media (max-width:768px) {
     aside section {
-    width: 100%;
-    height: 100%;
+    width: 185vw;
+    height: 230vh;
     background: white;
-    margin-right: 35rem;
-}
-
-div .sidebarpic img {
-    margin: 1rem 15rem;
+    margin: 0;
 }
 
 } 
