@@ -296,7 +296,6 @@ section .postlist img{
     aside section {
     width: 185vw;
     height: 230vh;
-    background: white;
     margin: 0;
 }
 
@@ -397,8 +396,7 @@ div .footer_logo {
     display: inline-block;
     width: 100%;
     margin-left: 350px;
-    font-size: 1rem;
-    border: .3rem solid none;
+    font-size: 1rem;    
 }
 
 @media (max-width:768px) {
@@ -408,25 +406,21 @@ div .footer_logo {
 
     footer div .footer_link {
         min-width: fit-content;
-        margin-bottom: 1px;
-        border: .2rem solid none;
+        margin-bottom: 1px;        
         display: flex;
     }
 
     div .footer_logo {
         margin: 5rem;
-        text-align: center;
-        border: .2rem solid none;
+        text-align: center;        
     }   
 
     .inner_footer .footer_link span {
-        width: 200px;
-        border: .3rem solid none;
+        width: 200px;        
     }  
     .social {
         width: 120px;
-        height: 100px;
-        border: .3rem solid none;
+        height: 100px;        
         margin-left: .0rem;
     }
     .inner_footer span p {
