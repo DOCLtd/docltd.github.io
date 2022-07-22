@@ -46,13 +46,14 @@ footer {
     grid-column-start: span 3;
 }
 
-/* ADD RESPONSIVENESS */
-@media (max-width:768px) {
+/* ADD RESPONSIVENESS- stops at 767px*/
+
+@media (max-width:767px) {
     .layout {
         grid-template-columns: 1fr;
         grid-template-rows: 100px auto auto 100px;
         height: 100vh;
-        width: 160vw;
+        width: auto;
         margin: 0;
     }
     header,main,footer {
@@ -62,6 +63,8 @@ footer {
         grid-column: none;  
     }
 } 
+
+
 
 /* header */
 
@@ -130,7 +133,7 @@ ul li a {
     color: white;
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
     nav {
         width:100%;
     }
@@ -179,7 +182,6 @@ div .post{
     opacity: 0.8;
     text-align: justify;
     text-indent: 3.5rem;
-    
 }
 
 .post p::first-letter {
@@ -211,14 +213,26 @@ main article {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/*from 1px to 767px */
+@media (max-width: 767px) {
     main article {
         display: flex;
         flex-direction: column;
     }
-
     article .col{
         width: 100%;
+    }
+}
+
+/*from 768px to 1200px*/
+@media (min-width:768px) and (max-width:1200px) {
+    div .post{
+        width: auto;
+        height: auto;
+    }
+    .post .p .info {
+        width: auto;
+        height: auto;
     }
 }
 
@@ -259,6 +273,7 @@ section .postlist {
     align-items: center;
     padding: 15px;
     perspective: 100px;
+ 
 }
 
 section .postlist img{
@@ -291,15 +306,20 @@ section .postlist img{
     transform: rotateZ(180deg);
 }
 
-
-@media (max-width:768px) {
+@media (max-width:767px) {
     aside section {
     width: 185vw;
     height: 230vh;
     margin: 0;
-}
-
+    }
 } 
+
+/*from 768px to 1200px*/
+@media (min-width:768px) and (max-width:1200px) {
+    section .postlist .img {
+    justify-content: center;    
+    }
+}
 
 /* footer */
 footer span a {
@@ -399,7 +419,7 @@ div .footer_logo {
     font-size: 1rem;    
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
     footer .inner_footer {
         width: 75%;
     }
@@ -432,7 +452,7 @@ div .footer_logo {
     }
 } 
 
-@media (min-width:769px) and (max-width:1200px) {
+@media (min-width:767px) and (max-width:1200px) {
     .sidebarpic {
         margin: 30rem 1rem 1rem 1rem;
         }
