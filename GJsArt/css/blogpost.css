@@ -197,6 +197,17 @@ article .col .post {
     img .postimg{
         border: 5px brown;
     }
+    .col div {
+        margin: auto;
+        
+        border: .3rem solid red;
+    }
+    .col .post .postimg {
+        width: 205px;
+        height: 306px;
+        margin: auto;
+        border: .3rem solid blue;
+    }
 }
 
 /* footer */
@@ -326,7 +337,7 @@ div .footer_logo {
         margin-left: .0rem;
     }
     .inner_footer span p {
-        margin-left: 300px;
+        margin-left: 30px;
     }
     footer a i:hover {
         background-color: rgb(0,52,255);
@@ -334,10 +345,8 @@ div .footer_logo {
     }
 } 
 
-@media (min-width:1px) and (max-width:766px) {
-    img .postimg {
-        border: .3rem solid none;
-    }
+
+@media (min-width:767px) and (max-width:1200px) {
     .inner_footer span p {
         margin-left: 30px;
     }
