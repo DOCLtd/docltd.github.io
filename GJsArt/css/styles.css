@@ -369,7 +369,7 @@ section .postlist img{
     transform: rotateZ(180deg);
 }
 
-@media (min-width:992px) and (max-width:1200px) {
+@media (min-width:992px) and (max-width:1400px) {
     aside section {
         height: 248vh;
     }
@@ -414,7 +414,7 @@ section .postlist img{
 @media screen and (max-width: 479px) {
     /* start of phone styles */
     aside section {
-        width: 195vw;
+        width: 395vw;
         height: 230vh;
         margin: 0;
         }
